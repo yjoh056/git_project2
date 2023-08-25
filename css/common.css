@@ -1,3 +1,17 @@
+:root {
+    --accent: #007aff;
+    --primary: #000000;
+    --secondary: #696969;
+    --title1: #000000;
+    --title2: #ffffff;
+    --text1: #cacaca;
+    --text2: #dadada;
+    --caption: #d9d9d9;
+    --background: #ffffff;
+    --background1: #f7f7f7;
+    --border: #d5d5d5;
+}
+
 .top_bar {
     background-color: var(--accent);
 }
@@ -7,7 +21,7 @@
 }
 
 .container {
-    background-color: var(--background1);
+    background-color: var(--border);
 }
 
 footer {
@@ -15,6 +29,8 @@ footer {
 }
 
 /* 영역구분용 */
+
+
 
 .top_bar {
     width: 100%;
@@ -40,7 +56,7 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    
+
 }
 
 .logo {
@@ -49,10 +65,11 @@ footer {
     line-height: 5rem;
     position: relative;
     left: 0;
+    background: url(../image/logo-gnb.svg) no-repeat center center;
 }
 
 .utility_wrap {
-    width: 90%;
+    width: 100%;
     position: relative;
     right: 0;
     height: 5rem;
@@ -69,11 +86,22 @@ footer {
 
 .container {
     width: 100%;
-    height: 100vw;
+    height: calc(100vw - 23rem);
 }
 
 .banner {
     width: 100%;
+    height: 100%;
+    background: no-repeat center top/contain;
+}
+
+.banner .banner_inner .sli1 {
+    background-image: url(../image/3a5d82bc-7844-44c7-a0cc-ced147048bf6.webp);
+}
+
+.banner::before {
+    content: '';
+    background-image: url(../image/icon-slick-prev-compo.svg);
 }
 
 .banner_inner {
