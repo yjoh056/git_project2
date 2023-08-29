@@ -25,9 +25,7 @@
 }
 
 /* 
-footer {
-    background-color: var(--title1);
-} */
+footer { background-color: var(--title1); } */
 
 /* 영역구분용 */
 
@@ -53,13 +51,13 @@ footer {
     text-decoration: underline;
 }
 
-/*  */
+/* */
 /* header */
 .header_nav {
     width: 100%;
     height: 7.5rem;
     margin: auto;
-    z-index: 10;
+    z-index: 100;
     border-bottom: 1px solid var(--border);
 }
 
@@ -112,13 +110,12 @@ footer {
     font-size: 0.8rem;
     font-weight: 600;
     line-height: 2.5rem;
-    padding-top: 10px;
 }
 
 .menu_left {
     width: auto;
     display: flex;
-
+    height: auto;
 }
 
 .menu_right {
@@ -131,87 +128,150 @@ footer {
     display: flex;
     height: 50px;
     gap: 1rem;
+    align-items: center;
 }
+
 
 .dept1 li {
     gap: 1rem;
-    line-height: 2rem;
+    line-height: 1.8rem;
     padding: 2px;
+}
+
+.dept1 li a {
+    padding: 6px 8px;
+    box-sizing: border-box;
+}
+
+.dept1>li>a:hover {
+    color: var(--background);
+    background-color: var(--title1);
+    box-sizing: border-box;
+    text-decoration: none;
+    border-radius: 20px;
 }
 
 .dept2 {
     position: absolute;
     background-color: var(--background);
-    z-index: -5;
     padding: 20px 24px 4px;
     display: flex;
-    justify-content: space-between;
     box-sizing: border-box;
     border-radius: 0 0 15px 15px;
+    height: 60%;
+    z-index: 5;
+    opacity: 0;
+    /* visibility: hidden; */
+    transition: opacity 0 ease, visibility 0 ease;
+    margin-bottom: 200px;
 }
 
 .dept2-1 {
-    border-right: 1px solid var(--border);
     width: 200px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    padding-top: 20px;
 }
 
 .dept2-1 li {
-    padding-right: 20px;
+    padding: 2px;
+}
+
+.dept2-1>li>a {
+    text-decoration: none;
+    font-size: 14px;
+    padding: 0;
+    padding-bottom: 2px;
+}
+
+.dept1>li:hover .dept2 {
+    opacity: 1;
+    visibility: visible;
 }
 
 .dept2-2 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: .5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    padding-bottom: 40px;
+    border-left: 1px solid var(--border);
     padding-left: 30px;
-    padding-bottom: 30px;
-    width: 400px;
-    height: 527px;
+    width: max-content;
 }
 
 .dept2-2 li {
+    display: flex;
     position: relative;
-    height: auto;
-    margin: auto 0;
-    border-radius: 15px;
-    background-color: var(--background1);
-    box-sizing: border-box;
-    text-indent: 3;
+    padding: 0;
+    /* width: 100%; */
+    /* height: 100%; */
     overflow: hidden;
+    background-color: transparent;
+    align-items: center;
 }
 
 .dept2-2 li .menu_img {
-    width: 110px;
     display: block;
-
+    width: auto;
+    height: auto;
+    max-width: 128px;
+    max-height: 144px;
+    border-radius: 20px;
 }
 
 .dept2-2 li p {
-    padding: 2px 5px;
-    font-size: 10px;
-    line-height: 1.25;
-    font-weight: 700;
+    padding-top: 2px;
+    width: 65%;
     text-align: center;
+    font-size: 12px;
+    line-height: 1rem;
+    font-weight: bold;
     position: absolute;
-    bottom: 4px;
-    word-break: keep-all;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    bottom: 8px;
+}
+
+.dept2-2 li p.w {
+    color: var(--background);
+}
+
+.dept2-2 li .blue {
+    position: absolute;
+    color: var(--background);
+    background-color: var(--accent);
+    font-size: 0.8rem;
+    line-height: 1.25;
+    padding: 2px 6px;
+    border-radius: 20px;
+    top: 18px;
+    left: 20px;
+}
+
+.dept2-2 li .red {
+    position: absolute;
+    color: var(--background);
+    background-color: var(red);
+    font-size: 0.8rem;
+    line-height: 1.25;
+    padding: 2px 6px;
+    border-radius: 20px;
+    top: 18px;
+    left: 20px;
 }
 
 /* //header */
 
+
 .container {
     position: relative;
     width: 100%;
-    z-index: -100;
+    /* z-index: -100; */
 }
 
 .banner {
     max-width: 1920px;
+    width: 100%;
     height: 810px;
 }
 
@@ -219,13 +279,13 @@ footer {
     width: 100%;
     height: 100%;
     position: relative;
+    background: no-repeat top left/cover;
 }
 
 .banner_inner .sli1 {
     width: 100%;
     height: 100%;
     background-image: url(../image/3a5d82bc-7844-44c7-a0cc-ced147048bf6.webp);
-
 }
 
 .banner::before {
@@ -236,7 +296,7 @@ footer {
     position: absolute;
     left: 3%;
     top: 50%;
-    z-index: 99999999;
+    /* z-index: 99999999; */
 }
 
 .banner::after {
@@ -247,7 +307,7 @@ footer {
     position: absolute;
     right: 3%;
     top: 50%;
-    z-index: 99999999;
+    /* z-index: 99999999; */
 }
 
 /* //banner */

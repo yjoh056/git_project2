@@ -61,10 +61,25 @@ h6,
     font-weight: 700;
 }
 
-.tet1{font-weight: 300; font-size: 1.8rem;}
-.tet2{font-weight: 200; font-size: 1.5rem;}
-.tet3{font-weight: 300; font-size: 1.4rem;}
-.tet4{font-weight: 200; font-size: 1.2rem;}
+.tet1 {
+    font-weight: 300;
+    font-size: 1.8rem;
+}
+
+.tet2 {
+    font-weight: 200;
+    font-size: 1.5rem;
+}
+
+.tet3 {
+    font-weight: 300;
+    font-size: 1.4rem;
+}
+
+.tet4 {
+    font-weight: 200;
+    font-size: 1.2rem;
+}
 
 .caption {
     font-size: 1.2rem;
