@@ -40,10 +40,11 @@ footer { background-color: var(--title1); } */
     flex-flow: row wrap;
 }
 
+
 .topbar_wrap {
     display: block;
     width: 100vw;
-    height: 2rem;
+    height: 3rem;
     color: var(--title2);
     gap: 1rem;
     cursor: pointer;
@@ -53,7 +54,7 @@ footer { background-color: var(--title1); } */
 .topbar {
     display: inline-block;
     height: 100%;
-    line-height: 2rem;
+    line-height: 3rem;
     font-weight: 700;
 }
 
@@ -110,6 +111,7 @@ footer { background-color: var(--title1); } */
     display: flex;
     justify-content: space-between;
     padding: 7px 14px;
+    vertical-align: middle;
 }
 
 /* = menu 영역= */
@@ -135,6 +137,7 @@ footer { background-color: var(--title1); } */
     width: auto;
     display: flex;
     flex-direction: row-reverse;
+    position: relative;
 }
 
 .dept1 {
@@ -172,18 +175,23 @@ footer { background-color: var(--title1); } */
 
 .dept2 {
     position: absolute;
-    margin-top: 1rem;
+    transform: translateY(1rem);
+    margin-top: 0.7rem;
     background-color: var(--background);
     padding: 20px 24px 4px;
     display: flex;
     box-sizing: border-box;
     border-radius: 0 0 15px 15px;
-    /* height: 60%; */
-    z-index: 5;
+    z-index: 2;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.1s ease;
+    transition: opacity 0.1s;
     margin-bottom: 200px;
+}
+
+.d2_right {
+    position: absolute;
+    right: 0
 }
 
 .dept2-1 {
@@ -275,6 +283,9 @@ footer { background-color: var(--title1); } */
     background-color: var(--danger);
 }
 
+
+
+
 /* //header */
 
 
@@ -329,7 +340,9 @@ footer { background-color: var(--title1); } */
     position: absolute;
     left: 3%;
     top: 50%;
-    z-index: 99999999;
+    top: 50%;
+    z-index: 5;
+    transform: translateX(-50% 0);
 }
 
 .banner::after {
@@ -340,17 +353,24 @@ footer { background-color: var(--title1); } */
     position: absolute;
     right: 3%;
     top: 50%;
-    /* z-index: 99999999; */
+    transform: translateX(-50% 0);
 }
 
 .banner_title {
     position: absolute;
-    top: 50%;
     left: 0;
-    transform: translateX(-50% 0);
-    line-height: 1.75;
-    width: 300px;
+    top: 35%;
+    width: 550px;
     overflow: hidden;
+}
+
+.banner_title h2 {
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.banner_title p {
+    line-height: 1.75;
 }
 
 
