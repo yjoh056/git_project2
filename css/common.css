@@ -173,6 +173,7 @@ footer { background-color: var(--title1); } */
     visibility: visible;
 }
 
+
 .dept2 {
     position: absolute;
     transform: translateY(1rem);
@@ -211,6 +212,10 @@ footer { background-color: var(--title1); } */
     line-height: 2.4rem;
     padding: 0;
     padding-bottom: 2px;
+}
+
+.dept2-1 li a:hover li {
+    border: 1px solid #000000;
 }
 
 .dept2-2 {
@@ -406,40 +411,78 @@ footer { background-color: var(--title1); } */
     padding-top: 2rem;
 }
 
-/*  */
-/* content1 */
-.content1 {}
-
-.swip {
-    padding-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    max-width: 1440px;
+/* contents */
+.content_inner {
     width: 100%;
-    gap: 12px;
+    height: 100%;
+    margin: 5rem auto;
 }
 
-.titlebox {
-    display: inline-flex;
-    vertical-align: text-bottom;
-    box-sizing: content-box;
+.h3 {
+    padding-right: 1rem;
+}
+
+
+.tab_title {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.tab_slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.button {
+    background: none;
+    border: none;
     padding: 0;
+    margin: 0;
 }
 
-.swip .card {
-    width: 300px;
-    height: 350px;
-    background-color: #cacaca;
-    border-radius: 20px;
+/* content2 */
+
+.sl-new {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 2rem;
+    margin-top: 2rem;
 }
 
-.content2 {}
+.content2 .tab_slider li {
+    width: 100%;
+}
 
-.content3 {}
+.tab_slider img {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+}
 
-.content4 {}
+/* content3 */
+.content3,
+.content4,
+.content5 {
+    height: 80rem;
+}
 
-.content5 {}
+.title {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.content3 .content_inner {
+    background: url(/image/mopc1-1.png) center center/cover no-repeat;
+}
+
+.content4 .content_inner {
+    background: url(/image/tvaudio1-1.png) center center/cover no-repeat;
+}
+
+.content5 .content_inner {
+    background: url(/image/el1-1.webp) center center/cover no-repeat;
+}
 
 .content6 {}
 
