@@ -482,15 +482,15 @@ li img {
 }
 
 .content3 .content_inner {
-    background: url(image/mopc1-1.png) center center/cover no-repeat;
+    background: url(../image/mopc1-1.png) center center/cover no-repeat;
 }
 
 .content4 .content_inner {
-    background: url(image/tvaudio1-1.png) center center/cover no-repeat;
+    background: url(../image/tvaudio1-1.png) center center/cover no-repeat;
 }
 
 .content5 .content_inner {
-    background: url(image/el1-1.webp) center center/cover no-repeat;
+    background: url(../image/el1-1.webp) center center/cover no-repeat;
 }
 
 
