@@ -1,13 +1,20 @@
-const depth1 = document.querySelector('.dept1 li');
-depth1.addEventListener('mouseover', function () {
-    depth1.querySelectorAll('.dept2').forEach((o) => { o.style.display = 'block' }) /* textMenu */
-})
-// hoverOn
-depth1.addEventListener('mouseout', function () {
-    depth1.querySelectorAll('.dept2').forEach((o) => { o.style.display = 'none' }) /* textMenu */
 
-})
-// hoverOff
+/***
+ * 
+ * slide
+* ** */
+const slides = $('.slid_wrap li');
+let n = 0;
+function slide() {
+    slides.removeClass('on')
+    slides.eq(n).addClass('on')
+    n++; /* 변수+1 */
+    if (n >= slides.length) { n = 0 }
+}
+setInterval(() => {
+    slide();
+}, 1500);
+slides.eq(n).addClass('on')
 
 // 버튼 클릭 이벤트 처리
 document.getElementById("cart").addEventListener("click", function () {
