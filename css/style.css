@@ -456,6 +456,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     background-color: transparent;
+    min-height: 100vh;
 }
 
 .banner {
@@ -582,6 +583,7 @@
 
 /* //slid  */
 .contents {
+    flex-grow: 1;
     order: 3;
 }
 
