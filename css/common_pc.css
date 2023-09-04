@@ -29,6 +29,8 @@
 .wrap {
     position: relative;
     display: flex;
+    height: 100vh;
+        flex-flow: row wrap;
 }
 
 .topbar_wrap {
@@ -202,10 +204,8 @@
 
 /* //banner */
 
-
-
 /* 320px */
-@media all and (max-width: 320px) {
+@media all and (min-width: 320px) {
 
     .searchbox,
     .menu_wrap {
@@ -241,6 +241,8 @@
     }
 
 }
+
+
 
 
 
@@ -516,10 +518,10 @@ footer {
 
 
 /* 768px */
-@media all and (max-width: 768px) {}
+@media all and (min-width: 768px) {}
 
 /* 1024px */
-@media all and (max-width: 1024px) {
+@media all and (min-width: 1024px) {
 
     .wrap {
         flex-flow: row wrap;
