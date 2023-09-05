@@ -22,7 +22,6 @@
     width: 100vw;
     height: 3rem;
     color: var(--title2);
-    gap: 1rem;
     cursor: pointer;
     text-align: center;
     background-color: var(--accent);
@@ -42,7 +41,7 @@
 .wrap {
     position: relative;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
 }
 
 .wrap::before {
@@ -167,6 +166,7 @@
 }
 
 .botoom_navi {
+    position: absolute;
     opacity: 0;
     visibility: hidden;
 }
@@ -327,13 +327,16 @@
 
 /* ====== 태블릿 ======= */
 @media screen and (max-width:1439px) {
+    html {
+        font-size: 56.25%;
+    }
+
     .topbar_wrap {
         display: none;
     }
 
     .header_nav {
         background-color: var(--background);
-        order: 1;
     }
 
     .header_inner {
@@ -460,7 +463,6 @@
 }
 
 .banner {
-    order: 2;
     max-width: 1920px;
     width: 100%;
     height: 80vh;
@@ -584,7 +586,6 @@
 /* //slid  */
 .contents {
     flex-grow: 1;
-    order: 3;
 }
 
 .content_inner {
@@ -596,6 +597,7 @@
 }
 
 /* contents */
+
 
 .h3 {
     padding-right: 1rem;
@@ -617,19 +619,23 @@
 .tab_slider {
     width: 100%;
     overflow: hidden;
+    transition: all 0.3s;
 }
 
-button {
+.tab_title button {
     background: none;
     border: none;
     padding: 3px 0;
     margin: 0;
+    line-height: 2rem;
 }
 
-.on button {
+.tab_title .on button {
     font-weight: bold;
     border-bottom: 2px solid rgba(0, 0, 0, 1);
 }
+
+
 
 /* content2 */
 
@@ -642,22 +648,15 @@ button {
 
 .tab_slider {
     position: relative;
+    transition: all 0.5s;
 }
 
-.slid2,
-.slid3,
-.slid4,
-.slid5 {
-    position: absolute;
-    left: 0;
-    top: 0;
-    margin: auto;
+.tab_slider .on {
+    display: block;
 }
 
-.slid2,
-.slid3,
-.slid4,
-.slid5 {
+
+.tab_slider div {
     display: none;
 }
 
@@ -700,22 +699,22 @@ button {
 /* //contents */
 /* //container */
 
-footer {
+.footer {
     width: 100%;
     height: auto;
-    order: 4;
+
 }
 
-.footer_inner {
+.footer .footer_inner {
     max-width: 1440px;
     margin: auto;
     padding: 36px 24px;
 }
 
-.sitemap {
+.footer .sitemap {
     display: flex;
 }
 
-.map_box {
+.footer .map_box {
     width: calc(100%/6);
 }
