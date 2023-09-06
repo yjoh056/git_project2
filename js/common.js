@@ -31,8 +31,16 @@ slides.eq(n).addClass('on')
  * 
  * contants
 * ** */
+/***
+ * 
+ * contants
+* ** */
 const buttons = document.querySelectorAll('.tab_title button');
-const sliderDivs = document.querySelectorAll('.tab_slider>div');
+const sliderDivs = document.querySelectorAll('.tab_slider > div');
+
+// 초기 활성화 상태 설정
+buttons[0].parentElement.classList.add('on');
+sliderDivs[0].classList.add('on');
 
 buttons.forEach((button) => {
   button.addEventListener('click', () => {
@@ -51,4 +59,3 @@ buttons.forEach((button) => {
     }
   });
 });
-

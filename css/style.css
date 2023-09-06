@@ -69,7 +69,7 @@
 }
 
 .header_inner img {
-    max-width: 10rem;
+    max-width: 5rem;
 }
 
 .header_inner {
@@ -270,10 +270,8 @@
 }
 
 
-.dept2-2 li img {
-    transition: all 0.5s;
-    width: 100%;
-    height: 100%;
+.dept2-2 li:hover img{
+    transform: scale(120%);
 }
 
 .dept2-2 li .menu_img {
@@ -282,7 +280,8 @@
     height: auto;
     max-width: 128px;
     max-height: 144px;
-    border-radius: 20px;
+    height: 100%;
+    transition: all 0.5s;
 }
 
 .dept2-2 li p {
@@ -290,14 +289,14 @@
     width: 65%;
     text-align: center;
     font-size: 12px;
-    line-height: 1.2rem;
+    line-height: 1.3rem;
     vertical-align: text-top;
     font-weight: bold;
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0%);
-    /* bottom: 8px; */
-    top: 120px;
+    padding-bottom: 1rem;
+    top: 80%;
 }
 
 .dept2-2 li p.w {
@@ -309,14 +308,14 @@
     background-color: var(--accent);
 }
 
-.dept2-2 .tag {
+.dept2-2 li .tag {
     position: absolute;
     font-size: 0.8rem;
     line-height: 1.25;
     padding: 2px 6px;
     border-radius: 20px;
     top: 18px;
-    left: 20px;
+    left: 15px;
 }
 
 .red {
@@ -568,6 +567,7 @@
     bottom: 60px;
     left: 50%;
     transform: translate(-50%);
+    z-index: 999;
 }
 
 .sli_toolbar {
@@ -578,6 +578,7 @@
     justify-content: space-around;
     font-weight: 600;
 }
+
 
 .sli_toolbar li:not(:last-child) {
     margin-right: 20px;
@@ -702,7 +703,7 @@
 .footer {
     width: 100%;
     height: auto;
-
+    order: 7;
 }
 
 .footer .footer_inner {
