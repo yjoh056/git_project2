@@ -139,6 +139,7 @@ table {
 * {
     box-sizing: border-box;
 }
+html{    transition: font-size 0.2s;}
 
 
 

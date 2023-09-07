@@ -1,31 +1,58 @@
 
-// 버튼 클릭 이벤트 처리
-document.getElementById("cart").addEventListener("click", function () {
-    var cartDiv = document.querySelector(".cart_list");
-    if(cartDiv.style.display="none"){
-        cartDiv.style.display="block";
-    }else{
-        cartDiv.style.display="none";
-    }
+//utility 버튼 클릭 이벤트 처리
+$("#cart").on("click", function() {
+  let cartDiv = $(".cart_list");
+  let mypagePop = $(".mypage-pop");
+
+  if (cartDiv.css("display") === "none") {
+      cartDiv.css("display", "block");
+      mypagePop.css("display", "none"); // 다른 컨텐츠 닫기
+      $(".wrap::before").css("display", "block");
+  } else {
+      cartDiv.css("display", "none");
+      $(".wrap::before").css("display", "none");
+  }
 });
+
+$("#myinfor").on("click", function() {
+  let cartDiv = $(".cart_list");
+  let mypagePop = $(".mypage-pop");
+
+  if (mypagePop.css("display") === "none") {
+      mypagePop.css("display", "block");
+      cartDiv.css("display", "none"); // 다른 컨텐츠 닫기
+      $(".wrap::before").css("display", "block");
+  } else {
+      mypagePop.css("display", "none");
+      $(".wrap::before").css("display", "none");
+  }
+});
+
+
 
 
 /***
  * 
- * slide
+ * bannrt slide
 * ** */
 const slides = $('slid_wrap li');
 let n = 0;
 function slide() {
-    slides.removeClass('on')
-    slides.eq(n).addClass('on')
-    n++; /* 변수+1 */
-    if (n >= slides.length) { n = 0 }
+  slides.removeClass('on')
+  slides.eq(n).addClass('on')
+  n++; /* 변수+1 */
+  if (n >= slides.length) { n = 0 }
 }
 setInterval(() => {
-    slide();
+  slide();
 }, 1500);
 slides.eq(n).addClass('on')
+// $(document).ready(function(){
+//   $(".slid_wrap").bxSlider({
+//     auto: true,
+//   });
+// });
+
 
 /***
  * 

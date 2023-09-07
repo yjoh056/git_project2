@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
@@ -38,15 +39,26 @@
                     <li class="search_icon">
                         <a href="#"><img src="image/gnb/icon-26-Search.svg" alt="검색"></a>
                     </li>
-                    <li class="cart_icon">
+                    <li class="icon-pop">
                         <a href="#" id="cart"><img src="image/gnb/icon-26-Cart.svg" alt="장바구니"></a>
                         <div class="cart_list caption">
                             <p>장바구니에 담겨있는 상품이 없습니다.</p>
                             <button class="bbut cart">장바구니 보기</button>
                         </div>
                     </li>
-                    <li class="my_icon">
-                        <a href="#"><img src="image/gnb/icon-26-mypage.svg" alt="마이페이지"></a>
+                    <li class="icon-pop">
+                        <a href="#" id="myinfor"><img src="image/gnb/icon-26-mypage.svg" alt="마이페이지"></a>
+                        <div class="mypage-pop">
+                            <ul class="my-pop">
+                                <li><a href="#">로그인</a></li>
+                                <li><a href="#">회원가입</a></li>
+                                <li><a href="#">주문/배송 조회</a></li>
+                                <li><a href="#">멤버십</a></li>
+                                <li><a href="#">나의 제품 관리</a></li>
+                                <li><a href="#">쿠폰존</a></li>
+                                <li><a href="#">삼성닷컴 회원 혜택</a></li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
                 <!-- menu 영역 -->
@@ -522,28 +534,28 @@
                         </ul>
                     </div>
                     <!-- //.menu_right -->
-                    <div class="botoom_navi">
-                        <ul class="bottom_menu">
-                            <li class="m-menu">
-                                <img src="./image/gnb/icon-menu.svg" alt="메뉴 이미지" class="menu_icon">
-                                <span>메뉴</span>
-                            </li>
-                            <li class="m-shipping">
-                                <img src="./image/gnb/icon-shipping.svg" alt="배송조회 메뉴 이미지" class="menu_icon">
-                                <span>배송 조회</span>
-                            </li>
-                            <li class="m_more"><span class="menu_icon">더보기</span>
-                            </li>
-                            <li class="m-myinfor">
-                                <img src="./image/gnb/icon-26-mypage.svg" alt="나의 정보 메뉴 이미지" class="menu_icon">
-                                <span>나의 정보</span>
-                            </li>
-                            <li class="m-recent">
-                                <img src="./image/gnb/icon-recent.svg" alt="최근 본 제품 메뉴 이미지" class="menu_icon">
-                                <span>최근 본 제품</span>
-                            </li>
-                        </ul>
-                    </div>
+                </div>
+                <div class="botoom_navi">
+                    <ul class="bottom_menu">
+                        <li class="m-menu">
+                            <img src="./image/gnb/icon-menu.svg" alt="메뉴 이미지" class="menu_icon">
+                            <span>메뉴</span>
+                        </li>
+                        <li class="m-shipping">
+                            <img src="./image/gnb/icon-shipping.svg" alt="배송조회 메뉴 이미지" class="menu_icon">
+                            <span>배송 조회</span>
+                        </li>
+                        <li class="m_more"><span class="menu_icon">더보기</span>
+                        </li>
+                        <li class="m-myinfor">
+                            <img src="./image/gnb/icon-26-mypage.svg" alt="나의 정보 메뉴 이미지" class="menu_icon">
+                            <span>나의 정보</span>
+                        </li>
+                        <li class="m-recent">
+                            <img src="./image/gnb/icon-recent.svg" alt="최근 본 제품 메뉴 이미지" class="menu_icon">
+                            <span>최근 본 제품</span>
+                        </li>
+                    </ul>
                 </div>
                 <!-- //.menu -->
             </div>
@@ -567,16 +579,17 @@
                     <li class="sli1 on">
                         <div class="banner_inner">
                             <div class="banner_title bn_t1">
-                                <h2 class="h1">Galaxy Tab S9 Series<br>런칭</h2>
-                                <p>삼성닷컴 단독! 최대 4% 즉시할인</p>
-                                <p>최대 10만 삼성카드 결제일할인</p>
+                                <h4>당신만의 소중한 순간을 위해</h4>
+                                <h2 class="h1">#YouMake</h2>
+                                <p>구매 금액대별 혜택과 동시구매 혜택까지</p>
+                                <p>최대40만 N-pay 포인트 쿠폰 놓치지 마세요!</p>
                                 <span class="bbut"><a href="#">구매 혜택 보기</a></span>
                             </div>
                         </div>
                     </li>
                     <li class="sli2">
                         <div class="banner_inner">
-                            <div class="banner_title bn_t1">
+                            <div class="banner_title bn_t2">
                                 <h2 class="h1">Galaxy Tab S9 Series<br>런칭</h2>
                                 <p>삼성닷컴 단독! 최대 4% 즉시할인</p>
                                 <p>최대 10만 삼성카드 결제일할인</p>
@@ -658,16 +671,22 @@
                 <!-- //.content 2 :탭-->
                 <div class="content3">
                     <div class="content_inner">
-                        <h2 class="title h3">모바일 & PC</h2>
-                        <ul class="tab_menu">
-                            <li class="on"><button data-target="tab1">Galaxy Z Flip5</button></li>
-                            <li><button data-target="tab2">Galaxy Z Folod5</button></li>
-                            <li><button data-target="tab3">Galaxy S23 Series</button></li>
-                            <li><button data-target="tab4">갤럭시 북3 신학기 페스타</button></li>
-                            <li><button data-target="tab5">갤럭시 캠퍼스</button></li>
-                        </ul>
                         <div class="tab_banner">
-                            <div class="bn_tab-1 on"></div>
+                            <h2 class="title h3">모바일 & PC</h2>
+                            <ul class="tab_menu">
+                                <li class="on"><button data-target="tab1">Galaxy Z Flip5</button></li>
+                                <li><button data-target="tab2">Galaxy Z Folod5</button></li>
+                                <li><button data-target="tab3">Galaxy S23 Series</button></li>
+                                <li><button data-target="tab4">갤럭시 북3 신학기 페스타</button></li>
+                                <li><button data-target="tab5">갤럭시 캠퍼스</button></li>
+                            </ul>
+                            <div class="bn_tab-1 on">
+                                <div class="bn_tab_titlebox">
+                                    <h2 class="h1">Galaxy Z Flip5 런칭</h2>
+                                    <p>삼성닷컴 단독! 최대 6% 즉시할인 + 삼성카드 6만원 결제일 할인</p>
+                                    <span class="bbut"><a href="#">구매 혜택 보기</a></span>
+                                </div>
+                            </div>
                             <div class="bn_tab-2"></div>
                             <div class="bn_tab-3"></div>
                             <div class="bn_tab-4"></div>
@@ -675,108 +694,312 @@
                         </div>
                     </div>
                 </div>
-                    <!-- //.content 3 :모바일&PC-->
-                    
-                
+                <!-- //.content 3 :모바일&PC-->
                 <div class="content4">
                     <div class="content_inner">
-                        <h2 class="title h3">TV&오디오</h2>
+                        <div class="tab_banner">
+                            <h2 class="title h3">TV&오디오</h2>
+                            <ul class="tab_menu">
+                                <li class="on"><button data-target="tab1">QLED 4K</button></li>
+                                <li><button data-target="tab2">Neo QLED 8K</button></li>
+                                <li><button data-target="tab3">삼성 OLED</button></li>
+                                <li><button data-target="tab4">The Serif</button></li>
+                                <li><button data-target="tab5">오디세이 Neo G9</button></li>
+                                <li><button data-target="tab6">AURA STUDIO 4</button></li>
+                            </ul>
+                            <div class="bn_tab-1 on">
+                                <div class="bn_tab_titlebox">
+                                    <h2 class="h1">QLED 4K<br>삼성닷컴 전용 에디션 런칭</h2>
+                                    <p>삼성닷컴에서만 만날 수 있는 최고의 가성비 TV</p>
+                                    <p>최대39% 할인+삼성전자 멤버십 포인트 적립</p>
+                                    <span class="bbut"><a href="#">구매 혜택 보기</a></span>
+                                </div>
+                            </div>
+                            <div class="bn_tab-2"></div>
+                            <div class="bn_tab-3"></div>
+                            <div class="bn_tab-4"></div>
+                            <div class="bn_tab-5"></div>
+                        </div>
                     </div>
                 </div>
                 <!-- //.content 4 TV&오디오-->
                 <div class="content5">
                     <div class="content_inner">
-                        <h2 class="title h3">가전</h2>
+                        <div class="tab_banner">
+                            <h2 class="title h3">가전</h2>
+                            <ul class="tab_menu">
+                                <li class="on"><button data-target="tab1">BEPOKE 냉장고</button></li>
+                                <li><button data-target="tab2">BEPOKE그랑데 AI</button></li>
+                                <li><button data-target="tab3">BEPOKE 제트 청소기|공기청정기</button></li>
+                                <li><button data-target="tab4">조리기기 Weekly Time Deal</button></li>
+                                <li><button data-target="tab5">BEPOKE 큐커</button></li>
+                            </ul>
+                            <div class="bn_tab-1 on">
+                                <div class="bn_tab_titlebox">
+                                    <h2 class="h1">BEPOKE냉장고<br>키친핏 용량 해방 프로모션</h2>
+                                    <p>4도어 키친핏과 1도어 변온 냉장고 함께 구매하고</p>
+                                    <p>최대45만원 상당 혜택을 만나보세요</p>
+                                    <span class="bbut"><a href="#">구매 혜택 보기</a></span>
+                                </div>
+                            </div>
+                            <div class="bn_tab-2"></div>
+                            <div class="bn_tab-3"></div>
+                            <div class="bn_tab-4"></div>
+                            <div class="bn_tab-5"></div>
+                        </div>
+
                     </div>
                 </div>
                 <!-- //.content 5 :가전-->
                 <div class="content6">
                     <div class="content_inner">
+                        <h2 class="h6">WHAT'S HAPPENING @SAMSUNG.COM</h2>
+                        <div class="card_gall">
+                            <ul class="card_roll">
+                                <li class="gl-card c1">
+                                    <img src="./image/roll1.jpeg" alt="MY 삼성제품 추천받기 이미지" class="rollcard">
+                                    <div class="rollcard_txt">
+                                        <p class="h5">RECOMMENDED</p>
+                                        <p class="h3">MY 삼성제품 추천받기</p>
+                                        <p class="caption">제품 구매가 고민 된다면 나에게 딱 맞는 제품을 추천받아 보세요</p>
+                                </li>
+                                <li class="gl-card c2">
+                                    <img src="./image/roll2.jpeg" alt="MY 삼성제품 추천받기 이미지" class="rollcard">
+                                    <div class="rollcard_txt">
+                                        <p class="h5">EXPERIENCE</p>
+                                        <p class="h3">BESPOKE 홈 메타<span class="link-arow"></span></p>
+                                        <p class="caption">우리집에 어울리는 삼성가전을 3D로 경험해보세요</p>
+                                </li>
+                            </ul>
+                            <ul class="card_roll">
+                                <li class="gl-card c3">
+                                    <img src="./image/roll3.jpeg" alt="MY 삼성제품 추천받기 이미지" class="rollcard">
+                                    <div class="rollcard_txt">
+                                        <p class="h5">EVENT</p>
+                                        <p class="h3">소상공인 환급 혜택</p>
+                                        <p class="caption">소상공인 대상 40% 환급 혜택도 만나보세요</p>
+
+                                </li>
+                                <li class="gl-card c4">
+                                    <img src="./image/roll4.jpeg" alt="MY 삼성제품 추천받기 이미지" class="rollcard">
+                                    <div class="rollcard_txt">
+                                        <p class="h5">EXPERIENCE</p>
+                                        <p class="h3">삼성스토어 VR<span class="link-arow"></span></p>
+                                        <p class="caption">제품 구매가 고민 된다면 나에게 딱 맞는 제품을 추천받아 보세요</p>
+
+                                </li>
+                            </ul>
+                            <ul class="card_roll">
+                                <li class="gl-card c5">
+                                    <img src="./image/roll5.jpeg" alt="MY 삼성제품 추천받기 이미지" class="rollcard">
+                                    <div class="rollcard_txt">
+                                        <p class="h5">EXPERIENCE</p>
+                                        <p class="h3">에너지 계산기 체험하기</p>
+                                        <p class="caption">에너지 계산기를 활용해 가전 제품의 평균 전력 소비량을 빠르고 간단하게 확인해보세요!</p>
+
+                                </li>
+                                <li class="gl-card c6">
+                                    <img src="./image/roll6.jpeg" alt="MY 삼성제품 추천받기 이미지" class="rollcard">
+                                    <div class="rollcard_txt">
+                                        <p class="h5">SUPPORT</p>
+                                        <p class="h3">스토어 상담 예약</p>
+                                        <p class="caption">맞춤 상담을 예약하고 삼성전자가 제안하는 라이프스타일을 직접 체험해보세요</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <!-- //.content 6 :엑스포-->
+                <!-- //.content 6 :happening-->
                 <div class="content7">
-                    <div class="content_inner"></div>
+                    <div class="content_inner">
+                        <div class="story_title">
+                            <h2>스토리</h2>
+                            <h2>#DoWhatYouCant</h2>
+                        </div>
+                        <ul class="story_slide_img">
+                            <li class="st1 on"><img src="./image/stotry_image1.webp" alt="" class="st_img1"></li>
+                            <li class="st2"><img src="./image/stotry_image2.webp" alt="" class="st_img2"></li>
+                            <li class="st3"><img src="./image/stotry_image3.webp" alt="" class="st_img3"></li>
+                            <li class="st4"><img src="./image/stotry_image4.webp" alt="" class="st_img4"></li>
+                        </ul>
+                        <div class="story_box">
+                            <ul class="st_txt_list">
+                                <li class="st_title st1 selet">
+                                    <span class="st_num">01</span>
+                                    <p class="st_txt">#아이코닉한 패션과 첨단 기술의 만남,<br>
+                                        삼성 X 톰브라운 컬렉션을 만나보세요<br>
+                                        <button class="more_story">더 알아보기</button>
+                                    </p>
+                                    
+                                </li>
+                                <li class="st_title st2">
+                                    <span class="st_num">02</span>
+                                    <p class="st_txt">#뛰어난 디자인과 기술로 모두를 사로잡은<br>
+                                        삼성의 수상 제품을 만나보세요</p>
+                                </li>
+                                <li class="st_title st3">
+                                    <span class="st_num">03</span>
+                                    <p class="st_txt">#함께하면 더 많은 것을 이룰 수 있습니다</p>
+                                </li>
+                                <li class="st_title st4">
+                                    <span class="st_num">04</span>
+                                    <p class="st_txt">#호기심 가득한, 조금은 특이한<br>
+                                        G·NUSMAS를 소개합니다</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
                 </div>
-                <!-- //.content 7 :happening-->
-                <div class="content8">
-                    <div class="content_inner"></div>
-                </div>
-                <!-- //.content 8 :스토리-->
+                <!-- //.content 7 :스토리-->
+
                 <!-- //.contents -->
             </div>
         </div>
         <footer class="footer">
-            <div class="footer_inner">
-                <div class="footer-content sitemap">
+            <div class="footer-content">
+                <div class="footer_inner sitemap">
                     <div class="map_box">
                         <dl class="product1">
                             <dt><a href="#">제품</a></dt>
                             <dd><a href="#">갤럭시</a></dd>
+                            <dd><a href="#">스마트폰</a></dd>
+                            <dd><a href="#">태블릿</a></dd>
+                            <dd><a href="#">워치</a></dd>
+                            <dd><a href="#">버즈</a></dd>
+                            <dd><a href="#">갤럭시북</a></dd>
+                            <dd><a href="#">모니터</a></dd>
+                            <dd><a href="#">프린터</a></dd>
+                            <dd><a href="#">메모리/스토리지</a></dd>
+                            <dd><a href="#">TV</a></dd>
+                            <dd><a href="#">Lifestyle TV</a></dd>
+                            <dd><a href="#">사운드바</a></dd>
+                            <dd><a href="#">하만</a></dd>
+                            <dd><a href="#">BESPOKE</a></dd>
+                            <dd><a href="#">냉장고</a></dd>
+                            <dd><a href="#">김치냉장고</a></dd>
+                            <dd><a href="#">식기세척기</a></dd>
                         </dl>
                     </div>
                     <div class="map_box">
                         <dl class="product2">
                             <dt></dt>
                             <dd>전기레인지</dd>
+                            <dd>오븐/전자레인지</dd>
+                            <dd>큐커</dd>
+                            <dd>정수기</dd>
+                            <dd>세탁기</dd>
+                            <dd>건조기</dd>
+                            <dd>에어드레서</dd>
+                            <dd>슈드레서</dd>
+                            <dd>에어컨</dd>
+                            <dd>공기청정기</dd>
+                            <dd>청소기</dd>
+                            <dd>스마트싱스</dd>
+                            <dd>액세서리 & 소모품</dd>
+                            <dd>데이코</dd>
                         </dl>
                     </div>
                     <div class="map_box">
                         <dl class="event">
                             <dt><a href="#">이벤트/선물하기</a></dt>
                             <dd><a href="#">기획전 모두보기</a></dd>
+                            <dd><a href="#">삼성닷컴 단독</a></dd>
+                            <dd><a href="#">선물하기</a></dd>
+                            <dd><a href="#">공동구매</a></dd>
+                            <dd><a href="#">아울렛</a></dd>
+                            <dd><a href="#">갤럭시 캠퍼스</a></dd>
+                            <dd><a href="#">삼성닷컴 Live</a></dd>
+                            <dd><a href="#">웨딩,신혼샵</a></dd>
+                            <dd><a href="#">커스텀 스튜디오</a></dd>
+                            <dd><a href="#">스토어 진열 할인 제품</a></dd>
+                            <dd><a href="#">닷컴 회원 혜택</a></dd>
+                            <dd><a href="#">이벤트존</a></dd>
+                            <dd><a href="#">e식품관</a></dd>
+                            <dd><a href="#">MD 초이스 샵</a></dd>
+                            <dd><a href="#">홈클래스</a></dd>
+                            <dd><a href="#">스토리</a></dd>
                         </dl>
                     </div>
                     <div class="map_box">
                         <dl class="survice">
                             <dt><a href="#">고객서비스</a></dt>
                             <dd><a href="#">매뉴얼 & 다운로드</a></dd>
+                            <dd><a href="#">삼성닷컴 FAQ</a></dd>
+                            <dd><a href="#">매장 찾기</a></dd>
+                            <dd><a href="#">서비스센터 찾기</a></dd>
+                            <dd><a href="#">Samsung Care+ (모바일/PC)</a></dd>
+                            <dd><a href="#">Samsung Care+ (가전/TV)</a></dd>
+                            <dd><a href="#">삼성스토어</a></dd>
+                            <dd><a href="#">삼성전자 멤버십</a></dd>
+                            <dd><a href="#">MD 비즈니스 협력제안</a></dd>
+                            <dd><a href="#">비즈니스 협력제안</a></dd>
+                            <dd><a href="#">삼성멤버스 커뮤니티</a></dd>
+                            <dd><a href="#">E-카탈로그</a></dd>
+                            <dd><a href="#">삼성닷컴 경험조사</a></dd>
                         </dl>
                     </div>
                     <div class="map_box">
                         <dl class="management">
                             <dt><a href="#">지속가능경영</a></dt>
                             <dd><a href="#">환경</a></dd>
+                            <dd><a href="#">보안 & 개인정보 보호</a></dd>
+                            <dd><a href="#">접근성</a></dd>
+                            <dd><a href="#">다양성 · 형평성 · 포용성</a></dd>
+                            <dd><a href="#">사회공헌</a></dd>
+                            <dd><a href="#">Corporate Sustainability</a></dd>
                         </dl>
                         <dl class="management2">
                             <dt><a href="#">윤리&준법경영</a></dt>
                             <dd><a href="#">경영원칙</a></dd>
+                            <dd><a href="#">부정제보</a></dd>
+                            <dd><a href="#">법위반제보</a></dd>
                         </dl>
                     </div>
                     <div class="map_box">
                         <dl class="company">
-                            <dt><a href="#">윤리&준법경영</a></dt>
-                            <dd><a href="#">경영원칙</a></dd>
+                            <dt><a href="#">회사소개</a></dt>
+                            <dd><a href="#">기업정보</a></dd>
+                            <dd><a href="#">사업정보</a></dd>
+                            <dd><a href="#">브랜드 아이덴티티</a></dd>
+                            <dd><a href="#">채용</a></dd>
+                            <dd><a href="#">투자자 정보</a></dd>
+                            <dd><a href="#">뉴스룸</a></dd>
+                            <dd><a href="#">윤리</a></dd>
+                            <dd><a href="#">디자인 삼성</a></dd>
+                            <dd><a href="#">배당조회</a></dd>
+                            <dd><a href="#">공지사항</a></dd>
                         </dl>
                         <dl class="anather">
                             <dt><a href="#">부가정보</a></dt>
                             <dd><a href="#">협력회사 사이버 신문고</a></dd>
+                            <dd><a href="#">폐카트리지 회수신청</a></dd>
                         </dl>
                     </div>
                 </div>
-                <div class="footer-content address">
-
-
+            </div>
+            <div class="footer-content address">
+                <div class="footer_inner">
                     <div class="infor1">삼사전자 주주회사 대표이사 : 한이사 사업자등록번호 : 004-00-00000 사업자 정보확인 통신판매업 신고 :
                         0000-서울제주-0000
                     </div>
-
                     <div class="infor2">사업장주소 : 경기도 서울시 영원구 상상로 1230(그린동) 호스팅비즈니스업인 : 한국사람비엠(주) 대표번호 : 00-0000-0000
                         제품/서비스/멤버십: 1000-0000(통화요금 : 발신자부담) 구입문의 : 0000-0000 e품위관 문의 : 0000-0000</div>
-
                     <div class="infor3">
                         본 사이트는 상품을 판매하지 않으며 가상의 내용이 포함되어 있습니다.
-
                         개별 판매자 판매 상품의 경우 삼성전자(주)는 통신판매중개업자로서 통신판매의 당사자가 아니므로, 개별 판매자가 등록한 상품, 거래정보 및 거래 등에 대해 책임을 지지
                         않습니다.
                         <a href="#">소비자분쟁해결기준</a>
                     </div>
-
                     <div class="infor4">본 사이트는 배움을 위하여 제작한 사이트로 삼성전자 서비스와 관련이 없습니다.</div>
                 </div>
-                <div class="footer-content mid">
-                </div>
-                <div class="footer-content botoom">
+            </div>
+            <div class="footer-content mid">
+                <div class="footer_inner"></div>
+            </div>
+            <div class="footer-content botoom">
+                <div class="footer_inner">
                     <ul class="bt-menu-lft">
                         <li><a href="#"></a></li>
                         <li><a href="#"></a></li>
@@ -798,8 +1021,11 @@
                     </ul>
                 </div>
             </div>
+
         </footer>
-        <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
         <script src="/js/common.js"></script>
 </body>
 

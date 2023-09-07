@@ -40,7 +40,7 @@ h2,
 h3,
 .h3 {
     font-size: 2.7rem;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 h4,
@@ -52,12 +52,13 @@ h4,
 h5,
 .h5 {
     font-size: 1.8rem;
-    font-weight: 400;
+    font-weight: 300;
+    color: var(--secodary);
 }
 
 h6,
 .h6 {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     font-weight: 700;
 }
 
@@ -82,11 +83,13 @@ h6,
 }
 
 .caption {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 300;
+    line-height: 1.5rem;
 }
 
 .lable {
-    font-size: 9em;
+    font-size: 0.9em;
     font-weight: 300;
+    color: var(--text1);
 }
