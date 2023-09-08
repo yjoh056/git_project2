@@ -950,6 +950,12 @@ dd {
     padding-bottom: 2rem;
 }
 
+
+
+.footer img {
+    width: 5rem;
+}
+
 .footer-content {
     width: 100%;
     height: auto;
@@ -967,6 +973,9 @@ dd {
     padding: 0;
 }
 
+.map_box .link-arow {
+    transform: scale(70%) translateY(10px);
+}
 
 .footer .sitemap {
     display: flex;
@@ -974,4 +983,100 @@ dd {
 
 .footer .map_box {
     width: calc(100%/6);
+}
+
+.address {
+    letter-spacing: -0.1rem;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.lable {
+    font-size: 12px;
+}
+
+.address .infor {
+    font-size: 13px;
+    line-height: 8px;
+    font-weight: 500;
+}
+
+.bt_btn {
+    color: #fff;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    width: 94px;
+    height: 20px;
+    line-height: 17px;
+    font-size: 12px;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+}
+
+.infor p {
+    margin-bottom: 0.5rem;
+    color: var(--secondary);
+}
+
+.r-bar::before {
+    content: '|';
+    color: var(--text2);
+    padding: 0 1rem;
+    font-weight: 200;
+    font-size: 12px;
+}
+
+.infor2 {
+    margin-top: 3rem;
+}
+
+.infor2 p {
+    line-height: 8px;
+}
+
+.footer-m-left {
+    line-height: 17px;
+    color: #707070;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.mid .footer_inner {
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 24px;
+}
+
+.footer-m-right {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.bt-menu-lft {
+    display: flex;
+    gap: 2rem;
+}
+.botoom{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    font-weight: 600;
+    justify-content: space-around;
+    align-items: center;
+}
+
+select{
+    border: 1px solid var(--text1);
+    padding: 1rem 1.8rem;
+    margin: auto 0.8rem;
+    align-items: center;
+    border-radius: 1rem;
+    appearance: none;
+    width: 20rem;
+    height: 3.8rem;
+    color: var(--primary);
+    font-weight: 700;
+    background: url(../image/icon-drop-up-pd.svg) center right no-repeat;
+    background-position: calc(100% - 1rem) center;
 }
