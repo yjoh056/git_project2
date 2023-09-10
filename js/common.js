@@ -1,30 +1,72 @@
+// 페이지 로드 시 실행되는 함수
+window.onload = function() {
+  var inputElement = document.getElementById("search-box");
+  var defaultSearchTerm = "갤럭시 Z 플립5"; // 기본
+
+  inputElement.value = defaultSearchTerm;
+};
+
+//검색창 이벤트 처리
+$('.search').click(function(){
+  let srchPop = $(".top_searchbar");
+  let cartDiv = $(".cart_list");
+  let mypagePop = $(".mypage-pop");
+  let wrap = $(".wrap");
+
+  if (srchPop.css("visibility") === "hidden") {
+    mypagePop.css("display", "none"); // 다른 컨텐츠 닫기
+    cartDiv.css("display", "none"); // 다른 컨텐츠 닫기
+    srchPop.css("visibility", "visible");
+    wrap.addClass("dimd-active"); // .wrap에 dimd-active 클래스 추가
+    
+
+  } else {
+    srchPop.css("visibility", "hidden");
+    wrap.removeClass("dimd-active"); // .wrap에서 dimd-active 클래스 제거
+    
+    var scrollPosition = parseInt($("body").css('top'));
+    
+    // body 요소의 position과 top 값을 초기화하여 스크롤 위치 복원
+    $("body").css({
+      position: "",
+      top: ""
+   });
+   
+   window.scrollTo(0, Math.abs(scrollPosition)); // 이전 스크롤 위치로 이동
+ }
+});
+
+
+
 
 //utility 버튼 클릭 이벤트 처리
 $("#cart").on("click", function() {
   let cartDiv = $(".cart_list");
   let mypagePop = $(".mypage-pop");
+  let dimd = $(".wrap::before");
 
   if (cartDiv.css("display") === "none") {
       cartDiv.css("display", "block");
       mypagePop.css("display", "none"); // 다른 컨텐츠 닫기
-      $(".wrap::before").css("display", "block");
+      dimd.css("display", "block");
   } else {
       cartDiv.css("display", "none");
-      $(".wrap::before").css("display", "none");
+      dimd.css("display", "none");
   }
 });
 
 $("#myinfor").on("click", function() {
   let cartDiv = $(".cart_list");
   let mypagePop = $(".mypage-pop");
+  let dimd = $(".wrap::before");
 
   if (mypagePop.css("display") === "none") {
       mypagePop.css("display", "block");
       cartDiv.css("display", "none"); // 다른 컨텐츠 닫기
-      $(".wrap::before").css("display", "block");
+      dimd.css("display", "block");
   } else {
       mypagePop.css("display", "none");
-      $(".wrap::before").css("display", "none");
+      dimd.css("display", "none");
   }
 });
 
@@ -85,4 +127,23 @@ buttons.forEach((button) => {
       targetSliderDiv.classList.add('on');
     }
   });
+});
+
+//이용약관
+$('.use-terms').click(function(){
+  if ($('.b1').is(':visible')) {
+    $('.b1').hide();
+  } else {
+    $('.b1').show();
+    $('.b2').hide();
+  }
+});
+
+$('.persnal-terms').click(function(){
+  if ($('.b2').is(':visible')) {
+    $('.b2').hide();
+  } else {
+    $('.b2').show();
+    $('.b1').hide();
+  }
 });
