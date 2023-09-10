@@ -487,7 +487,6 @@
 }
 
 .side_flot_menu .top_bt {
-    display: block;
     background: url(../image/btnGotop.png) no-repeat, #fff;
     background-position: 50%;
     width: 7rem;

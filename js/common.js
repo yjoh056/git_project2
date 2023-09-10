@@ -1,10 +1,23 @@
 // 페이지 로드 시 실행되는 함수
 window.onload = function() {
-  var inputElement = document.getElementById("search-box");
-  var defaultSearchTerm = "갤럭시 Z 플립5"; // 기본
+  let inputElement = document.getElementById("search-box");
+  let defaultSearchTerm = "갤럭시 Z 플립5"; // 기본
 
   inputElement.value = defaultSearchTerm;
 };
+//top button
+$(window).scroll(function() {
+  let scrollPosition = $(window).scrollTop();
+  let windowHeight = $(window).height();
+
+  if (scrollPosition > windowHeight) {
+    $('.top_bt').fadeIn();
+  } else {
+    $('.top_bt').fadeOut();
+  }
+});
+
+
 
 //검색창 이벤트 처리
 $('.search').click(function(){
@@ -24,7 +37,7 @@ $('.search').click(function(){
     srchPop.css("visibility", "hidden");
     wrap.removeClass("dimd-active"); // .wrap에서 dimd-active 클래스 제거
     
-    var scrollPosition = parseInt($("body").css('top'));
+    let scrollPosition = parseInt($("body").css('top'));
     
     // body 요소의 position과 top 값을 초기화하여 스크롤 위치 복원
     $("body").css({
