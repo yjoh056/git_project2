@@ -470,12 +470,13 @@
 /* 사이드 플로팅메뉴 */
 .side_flot_menu {
     position: fixed;
-    width: auto;
     bottom: 3rem;
     right: 3.2rem;
     z-index: 90;
-    text-align: right;
-    font-size: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 15%;
 }
 
 .side_flot_menu button {
@@ -508,7 +509,7 @@
 }
 
 .side_flot_menu .plus_menu {
-    display: block;
+    /* display: block; */
     background: url(../image/Floating__plus.png) no-repeat, url(../image/Floating_plusBG.png);
     background-size: 100%, cover;
     background-position: 50%;
@@ -521,6 +522,21 @@
     transform: rotate(90deg);
 }
 
+.chat-menu {
+    display: none;
+}
+
+.chat-menu li {
+    height: 64px;
+    width: 230px;
+    margin-bottom: 1rem;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 40px;
+    text-align: right;
+    line-height: 7rem; 
+}
 .menu01 {
     background-image: url(../image/reservation_BG.png);
 }
@@ -532,15 +548,12 @@
 .menu03 {
     background-image: url(../image/chatbot_BG.png);
 }
-
-.side_flot_menu .chat-menu {
-    display: flex;
-    width: 206px;
-}
-
-.side_flot_menu .chat-menu li {
-    display: block;
-    height: 64px;
+.chat-menu a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: var(--background);
+    padding: 0 2.5rem;
 }
 
 /* 하위 메뉴-히든 */
