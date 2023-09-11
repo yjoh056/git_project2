@@ -90,11 +90,14 @@ $("#myinfor").on("click", function () {
 //플로팅 사이드 메뉴
 $('.plus_menu').on("click", function () {
   let chatMenuList = $(".chat-menu");
+  let plusMenu = $('.plus_menu');
 
   if (chatMenuList.css("display") === "none") {
     chatMenuList.css("display", "block");
+    plusMenu.addClass('active');
   } else{
     chatMenuList.css("display", "none");
+    plusMenu.removeClass('active');
   }
 });
 

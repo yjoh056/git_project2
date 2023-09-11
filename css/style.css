@@ -518,9 +518,13 @@
     border-radius: 50%;
 }
 
-.plus_menu:active {
-    transform: rotate(90deg);
-}
+.plus_menu {
+    transition: transform 0.3s ease;
+  }
+  
+  .plus_menu.active {
+    transform: rotate(45deg);
+  }  
 
 .chat-menu {
     display: none;
