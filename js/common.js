@@ -160,3 +160,8 @@ $('.persnal-terms').click(function(){
     $('.b1').hide();
   }
 });
+
+//top
+$('.top_bt').click(function() {
+  $('html, body').animate({ scrollTop: 0 }, 'slow');
+});
