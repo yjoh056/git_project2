@@ -156,7 +156,8 @@
     text-align: left;
     counter-increment: rankup-counter;
 }
-.bt_searchbar_close{
+
+.bt_searchbar_close {
     position: relative;
     z-index: 9999999;
     top: 20px;
@@ -310,16 +311,16 @@
 .dept1 {
     display: flex;
     height: 50px;
-    gap: 1rem;
+    column-gap: 1rem;
     align-items: center;
 }
 
+
 .dept1-1>a {
     line-height: 4.8rem;
-    padding: 2px;
     height: 100%;
+    padding: 0.5rem 1rem;
 }
-
 
 /* dept1 hover */
 .dept1 .dept1-1:hover>a {
@@ -328,7 +329,6 @@
     box-sizing: border-box;
     text-decoration: none;
     border-radius: 20px;
-    padding: 0.5rem 1rem;
 }
 
 .dept1 li:hover .dept2 {
@@ -338,6 +338,18 @@
 
 .dept1 li:hover .wrap::before {
     opacity: 1;
+}
+
+.dept1-1 .link-arow {
+    transform: scale(0.8, 0.8);
+    align-items: end;
+}
+
+.part1 {
+    border-left: 1px solid;
+    height: 2rem;
+    line-height: 2rem;
+    margin: 0 0.5em;
 }
 
 /* menu dept2 */
@@ -520,11 +532,11 @@
 
 .plus_menu {
     transition: transform 0.3s ease;
-  }
-  
-  .plus_menu.active {
+}
+
+.plus_menu.active {
     transform: rotate(45deg);
-  }  
+}
 
 .chat-menu {
     display: none;
@@ -539,8 +551,9 @@
     background-repeat: no-repeat;
     border-radius: 40px;
     text-align: right;
-    line-height: 7rem; 
+    line-height: 7rem;
 }
+
 .menu01 {
     background-image: url(../image/reservation_BG.png);
 }
@@ -552,7 +565,8 @@
 .menu03 {
     background-image: url(../image/chatbot_BG.png);
 }
-.chat-menu a{
+
+.chat-menu a {
     display: inline-block;
     width: 100%;
     height: 100%;
@@ -1185,7 +1199,8 @@ dd {
     border: 1px solid var(--text2);
     border-radius: 10px;
 }
-.dropup-list{
+
+.dropup-list {
     display: flex;
     flex-direction: column;
 }
@@ -1434,4 +1449,35 @@ dd {
 }
 
 /* ====== 모바일 ======= */
-@media screen and (max-width:767px) {}
+@media screen and (max-width:767px) {
+    .slid_wrap .sli1 {
+        background-image: url(../image/visual_banner02-m.jpg);
+    }
+
+    .header_nav {
+        width: 100%;
+        margin: 0;
+    }
+
+    .sli_toolbar {
+        display: none;
+    }
+
+    .bn_t1 {
+        top: 8rem;
+    }
+    .contents{
+        width: 100vw;
+    }
+    .content_inner{
+        width: 100%;      
+    }
+    .tab_slider ul {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        
+        margin-top: 1rem;
+        height: 70rem;
+    }
+
+}
