@@ -102,10 +102,9 @@ $('.plus_menu').on("click", function () {
 });
 
 
-/***
- * 
- * bannrt slide
-* ** */
+/*
+// bannrt slide
+*/
 const slides = $('slid_wrap li');
 let n = 0;
 function slide() {
@@ -125,14 +124,9 @@ slides.eq(n).addClass('on')
 // });
 
 
-/***
- * 
- * contants
-* ** */
-/***
- * 
- * contants
-* ** */
+/*
+//contants
+*/
 const buttons = document.querySelectorAll('.tab_title button');
 const sliderDivs = document.querySelectorAll('.tab_slider > div');
 
