@@ -151,5 +151,5 @@ body{
 }
 
 a:focus {
-    border: dotted 2px var(--accent);
+    border: dotted 2px var(--accent) !important ;
 }
