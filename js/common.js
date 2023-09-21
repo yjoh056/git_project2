@@ -40,16 +40,6 @@ $('.search').click(function () {
   } else {
     srchPop.css("visibility", "hidden");
     wrap.removeClass("dimd-active"); // .wrap에서 dimd-active 클래스 제거
-
-    let scrollPosition = parseInt($("body").css('top'));
-
-    // body 요소의 position과 top 값을 초기화하여 스크롤 위치 복원
-    $("body").css({
-      position: "",
-      top: ""
-    });
-
-    window.scrollTo(0, Math.abs(scrollPosition)); // 이전 스크롤 위치로 이동
   }
 });
 
