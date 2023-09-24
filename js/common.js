@@ -23,64 +23,74 @@ $(window).scroll(function () {
 /*
 //#top
 */
-$('.top_bt').click(function () {
+$('.top_bt').on('click', function () {
   $('html, body').animate({ scrollTop: 0 }, 'slow');
 });
 
 /*
 //검색창 이벤트 처리
 */
-let srchPop = $(".top_searchbar");
-let cartDiv = $(".cart_list");
-let mypagePop = $(".mypage-pop");
-let dim = $(".dimd-active");
-$('.search').click(function () {
-  if (srchPop.css("visibility") === "hidden") {
-    mypagePop.css("display", "none"); // 다른 컨텐츠 닫기
-    cartDiv.css("display", "none"); // 다른 컨텐츠 닫기
-    srchPop.css("visibility", "visible");
-    dim.css("display", "block"); // dim 추가
-  }
+const srchPop = $(".top_searchbar");
+const cartDiv = $(".cart_list");
+const mypagePop = $(".mypage-pop");
+const dim = $(".dimd-active");
+let dimd = $(".dimd");
+$('.search').on('click', function () {
+  mypagePop.css("display", "none"); // 다른 컨텐츠 닫기
+  cartDiv.css("display", "none"); // 다른 컨텐츠 닫기
+  srchPop.css("visibility", "visible");
+  dim.css("display", "block"); // dim 추가
+  $('.wrap').addClass('modal'); //scroll제어
 });
-
-$('.bt_searchbar_close').click(function () {
+$('.bt_searchbar_close').on('click', function () {
   srchPop.css("visibility", "hidden");
   dim.css("display", "none"); // dim 제거
+  $('.wrap').removeClass('modal'); //scroll제어
 });
 
 
 /*
 //utility 버튼 클릭 이벤트 처리
 */
-$("#cart").on("click", function () {
-  let cartDiv = $(".cart_list");
-  let mypagePop = $(".mypage-pop");
-  let dim = $(".dimd");
 
+$('#cart').on("mouseenter", function () {
   if (cartDiv.css("display") === "none") {
-    cartDiv.css("display", "block");
     mypagePop.css("display", "none"); // 다른 컨텐츠 닫기
-    dim.css("display", "block"); // dim 추가
-  } else {
-    cartDiv.css("display", "none");
-    dim.css("display", "none"); // dim 제거
+    cartDiv.css("display", "block");
+    dimd.css("display", "block"); // dim 추가
   }
-});
+})
+$('#cart').on("mouseleave", function () {
+  cartDiv.css("display", "none");
+  mypagePop.css("display", "none");
+  dimd.css("display", "none"); // dim 제거
+})
 
-$("#myinfor").on("click", function () {
-  let cartDiv = $(".cart_list");
-  let mypagePop = $(".mypage-pop");
-  let dim = $(".dimd");
+dimd.on("mouseenter", function () {
+  cartDiv.css("display", "none");
+  mypagePop.css("display", "none");
+  dimd.css("display", "none"); // dim 제거
+})
 
+$("#myinfor").on("mouseenter", function () {
   if (mypagePop.css("display") === "none") {
     mypagePop.css("display", "block");
     cartDiv.css("display", "none"); // 다른 컨텐츠 닫기
-    dim.css("display", "block"); // dim 추가
-  } else {
-    mypagePop.css("display", "none");
-    dim.css("display", "none"); // dim 제거
+    dimd.css("display", "block"); // dim 추가
   }
 });
+$('#myinfor').on("mouseleave", function () {
+  cartDiv.css("display", "none");
+  mypagePop.css("display", "none");
+  dimd.css("display", "none"); // dim 제거
+})
+
+dimd.on("click", function () {
+  mypagePop.css("display", "none");
+  cartDiv.css("display", "none");
+  dimd.css("display", "none"); // dim 제거
+  $('html').removeClass('modal'); //scroll제어
+})
 
 /*
 //플로팅 사이드 메뉴
@@ -99,11 +109,20 @@ $('.plus_menu').on("click", function () {
 });
 
 // menu dim 처리
-$('dept1').on("focus", function () {
-  if ($('.dimd').css("display", "none")) {
-    $('.dimd').show();
+const dept1Items = $('.dept1 li');
+const dept2Items = $('.dept2');
+
+dept1Items.on('mouseover', function () {
+  const index = dept1Items.index(this);
+  const dept2Item = dept2Items.eq(index);
+
+  if (dept2Item.css('visibility') === 'visible') {
+    dimd.css("display", "block");
+  } else {
+    dimd.css("display", "none");
   }
 });
+
 
 /*
 // bannrt slide
@@ -114,6 +133,8 @@ $('.showcase').bxSlider({
   nextSelector: '.showcase_controls .next',
   prevSelector: '.showcase_controls .prev',
   pagerCustom: '.showcase_pager',
+  autoDelay: 1,
+  stopAutoOnClick: true,
 })
 
 
@@ -144,6 +165,41 @@ buttons.forEach((button) => {
     }
   });
 });
+
+/* content7 story */ 
+const stTxtLi = $('.st_txt_list li');
+const stImgLi = $('.story_slide_img .stImg');
+let lastHoveredLi = null;
+
+// 해당 li에 마우스 진입 시 'selet' 클래스 추가 및 lastHoveredLi 갱신
+stTxtLi.on('mouseenter', function () {
+  const index = $(this).index();
+  $(this).addClass('selet').siblings().removeClass('selet');
+  stImgLi.eq(index).addClass('selet').siblings().removeClass('selet');
+  lastHoveredLi = this;
+});
+
+// 해당 li에서 마우스 이탈 시 'selet' 클래스 제거
+stTxtLi.on('mouseleave', function () {
+  const index = $(this).index();
+  if (lastHoveredLi !== null && lastHoveredLi !== this) {
+    $(lastHoveredLi).addClass('selet');
+    stImgLi.eq($(lastHoveredLi).index()).addClass('selet');
+  }
+});
+
+// 윈도우에서 마우스 이탈 시, 마지막으로 마우스 오버한 li 유지
+$(window).on("mouseout", function(event) {
+  const target = event.target;
+  if (!$(target).closest('.st_txt_list').length && lastHoveredLi !== null && !$(lastHoveredLi).hasClass("selet")) {
+    $(lastHoveredLi).addClass("selet");
+    const index = stTxtLi.index(lastHoveredLi);
+    stImgLi.eq(index).addClass("selet");
+  }
+});
+
+
+
 /*
 //이용약관
 */

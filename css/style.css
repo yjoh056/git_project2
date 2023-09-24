@@ -15,9 +15,18 @@
     --warning: #30B5AA;
     --success: #007aff;
 }
-:focus {
+
+a:focus {
     border: 3px dashed var(--accent) !important;
+    border: none;
 }
+
+html body .modal {
+    overflow: hidden !important;
+    user-select: none;
+    height: 100vh;
+}
+
 /* == wrap == */
 .wrap {
     position: relative;
@@ -32,7 +41,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.3);
     z-index: 90;
     transition: opacity .3s;
     display: none;
@@ -49,6 +58,7 @@
     cursor: pointer;
     text-align: center;
     background-color: var(--accent);
+    z-index: -1;
 }
 
 .topbar {
@@ -116,13 +126,13 @@
 }
 
 .search_layer {
-    position: fixed;
+    position: absolute;
     top: 80.49px;
     left: 50%;
     transform: translateX(-300px);
     width: 600px;
-    height: 50%;
-    padding: 0.3rem 3rem;
+    height: auto;
+    padding: 0.3rem 3rem 3rem 3rem;
     box-shadow: 0px 5px 5px rgba(51, 51, 51, 0.5);
     border: 1px solid var(--border);
     box-sizing: border-box;
@@ -318,8 +328,7 @@ header .searchbox {
 
 
 .dept1-1>a {
-    line-height: 4.8rem;
-    height: 100%;
+    line-height: 5rem;
     padding: 0.5rem 1rem;
 }
 
@@ -355,7 +364,6 @@ header .searchbox {
 }
 
 .dept1-1 {
-    align-items: end;
     position: relative;
 }
 
@@ -370,10 +378,8 @@ header .searchbox {
 .dept2 {
     position: absolute;
     display: block;
-    top: 33.4px;
-    transform: translateY(1rem);
+    top: 5rem;
     margin: auto;
-    margin-top: 0.7rem;
     background-color: var(--background);
     padding: 20px 24px 4px;
     display: flex;
@@ -389,8 +395,7 @@ header .searchbox {
 
 
 .d2_right {
-    position: absolute;
-    right: 0
+    right: 0;
 }
 
 .dept2-1 {
@@ -410,6 +415,17 @@ header .searchbox {
     padding: 8px 0;
 }
 
+.mb3 {
+    margin-bottom: 40px;
+}
+
+.gr2 {
+    display: grid;
+    align-items: start;
+    justify-items: start;
+    padding-bottom: 80px;
+}
+
 /* hover dept2 */
 .dept2-1 li:hover a {
     border-bottom: 1px solid #333;
@@ -418,7 +434,7 @@ header .searchbox {
 .dept2-2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3px;
+    gap: 12px;
     margin-bottom: 40px;
     border-left: 1px solid var(--border);
     padding-left: 30px;
@@ -429,6 +445,8 @@ header .searchbox {
     display: flex;
     position: relative;
     padding: 1px;
+    max-width: 128px;
+    max-height: 143px;
     width: 100%;
     height: 100%;
     border-radius: 20px;
@@ -445,9 +463,8 @@ header .searchbox {
 .dept2-2 li .menu_img {
     display: block;
     width: auto;
-    height: auto;
     max-width: 128px;
-    max-height: 144px;
+    max-height: 143px;
     height: 100%;
     transition: all 0.5s;
 }
@@ -605,45 +622,43 @@ header .searchbox {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 54;
     transition: opacity .3s;
     display: none;
 }
-.container {
+
+.hero-banner {
+    display: block;
     width: 100%;
+    max-width: 1920px;
     max-height: fit-content;
-    display: flex;
     position: relative;
-    flex-direction: column;
-    flex-wrap: wrap;
-    background-color: transparent;
-    min-height: 100vh;
+    margin: auto;
 }
 
 .banner {
+    width: 100%;
+    height: 100%;
     position: relative;
+    background-color: transparent;
 }
 
-.banner .bx-viewport {
-    height: 80vh !important;
-}
 
 .showcase .textwrap {
     position: absolute;
     z-index: 999;
-
 }
 
 
 .showcase img {
-    max-width: 100%;
-    height: 100%;
+    width: 100%;
 }
 
 .banner .bx-controls {
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
     z-index: 99999;
 }
 
@@ -684,41 +699,47 @@ header .searchbox {
     position: absolute;
     display: flex;
     gap: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 2%;
+    left: 24rem;
+    bottom: 8%;
     z-index: 99999;
     font-size: 2rem;
+}
+
+.showcase_pager a {
+    display: inline-block;
     padding-bottom: 1rem;
 }
 
-.showcase_pager .active {
-    border-bottom: 2px solid;
+.showcase_pager .progress.active {
+    border-bottom: 2px solid var(--primary);
+}
+
+.showcase_pager .progress {
+    border-bottom: 2px solid rgba(44, 44, 44, 0.5);
 }
 
 /* text */
-
-.banner_title {
-    position: absolute;
-    overflow: hidden;
-}
-
 .bn-tt1 {
-    top: 10rem;
     left: 24rem;
+    top: 10rem;
 }
 
 .bn-tt2 {
-    left: 15%;
+    left: 24rem;
     top: 10%;
 }
 
-.banner_title h2 {
+.bn-tt3 {
+    left: 24rem;
+    top: 30%;
+}
+
+.textwrap h2 {
     margin-bottom: 1.5rem;
     line-height: 1.2;
 }
 
-.banner_title p {
+.textwrap p {
     line-height: 1.75;
 }
 
@@ -980,18 +1001,27 @@ header .searchbox {
     padding-top: 2rem;
 }
 
-.more_story {
+button.more_story {
+    appearance: none;
+    border: none;
+    background: transparent;
     font-size: 1.2rem;
     font-weight: bold;
     border-bottom: 2px solid rgba(0, 0, 0, 1);
+    padding-top: 1rem;
+    display: none;
+    font-weight: 700;
 }
 
 
 .st_txt_list {
+    position: absolute;
+    top: 2rem;
+    right: 17rem;
+    width: 30rem;
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    position: relative;
 }
 
 .st_title {
@@ -1000,16 +1030,26 @@ header .searchbox {
     padding-top: 3rem;
 }
 
-.st_img2,
-.st_img3,
-.st_img4 {
-    display: none;
-}
-
 .st_title {
     width: 100%;
     border-top: 2px solid var(--text1);
     position: relative;
+    line-height: 2rem;    
+    justify-content: end;
+}
+.st_title p{    
+    width: 235px;
+}
+
+
+.st_title.selet {
+    width: 130%;
+    right: 30%;
+    border-top: 2px solid var(--primary);
+    position: relative;
+    line-height: 2rem;
+    padding-right: 3rem;
+    font-weight: 700;
 }
 
 /* //contents */
@@ -1021,9 +1061,31 @@ span.link-arow {
     align-items: end;
     background: url(../image/icon-outlink.svg)center center/cover no-repeat;
 }
+.story_slide_img {
+    padding-right: 50rem;
+}
+
+.story_slide_img .stImg{
+    display: none;
+}
+.story_slide_img .stImg.selet{
+    display: block;
+}
 
 .story_slide_img li img {
     border-radius: 20px;
+}
+
+.story_slide_img button {
+    display: none;
+}
+
+.selet button.more_story {
+    display: block !important;
+}
+
+.story_box {
+    position: relative;
 }
 
 /* //container */
@@ -1452,7 +1514,7 @@ dd {
 
 /* ====== 모바일 ======= */
 @media screen and (max-width:767px) {
-    .slid_wrap .sli1 {
+    .slid_wrap .sli2 {
         background-image: url(../image/visual_banner02-m.jpg);
     }
 
