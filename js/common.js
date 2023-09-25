@@ -40,12 +40,12 @@ $('.search').on('click', function () {
   cartDiv.css("display", "none"); // 다른 컨텐츠 닫기
   srchPop.css("visibility", "visible");
   dim.css("display", "block"); // dim 추가
-  $('.wrap').addClass('modal'); //scroll제어
+  $('html').addClass('modal'); //scroll제어
 });
 $('.bt_searchbar_close').on('click', function () {
   srchPop.css("visibility", "hidden");
   dim.css("display", "none"); // dim 제거
-  $('.wrap').removeClass('modal'); //scroll제어
+  $('html').removeClass('modal'); //scroll제어
 });
 
 
