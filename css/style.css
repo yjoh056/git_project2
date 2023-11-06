@@ -457,11 +457,13 @@ header .searchbox {
     overflow: hidden;
     background-color: transparent;
     align-items: center;
+    perspective: 900px;
 }
 
 
 .dept2-2 li:hover img {
     transform: scale(1.2, 1.2);
+
 }
 
 .dept2-2 li .menu_img {
@@ -499,8 +501,9 @@ header .searchbox {
     line-height: 1.25;
     padding: 2px 6px;
     border-radius: 20px;
-    top: 18px;
+    top: 15px;
     left: 15px;
+    z-index: 9999;
 }
 
 .blue {
@@ -610,7 +613,7 @@ header .searchbox {
 }
 
 /* 하위 메뉴-히든 */
-.botoom_navi {
+.bottom_navi {
     opacity: 0;
     visibility: hidden;
     left: 0;
@@ -638,7 +641,6 @@ header .searchbox {
     max-width: 1920px;
     max-height: fit-content;
     position: relative;
-    margin: auto;
 }
 
 .banner {
@@ -652,8 +654,16 @@ header .searchbox {
 .showcase .textwrap {
     position: absolute;
     z-index: 999;
+    width: 550px;
 }
 
+.showcase .pc_pic {
+    display: block;
+}
+
+.showcase .mo_pic {
+    display: none;
+}
 
 .showcase img {
     width: 100%;
@@ -735,7 +745,7 @@ header .searchbox {
 
 .bn-tt3 {
     left: 24rem;
-    top: 30%;
+    top: 10%;
 }
 
 .textwrap h2 {
@@ -766,10 +776,6 @@ header .searchbox {
 
 
 .contents {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    height: auto;
     margin: 0 auto;
 }
 
@@ -779,10 +785,8 @@ header .searchbox {
     height: 100%;
     margin: 3rem auto;
     padding-top: 2rem;
-    padding: 1rem;
+
     position: relative;
-    display: flex;
-    flex-direction: column;
 }
 
 .content_inner .title {
@@ -812,7 +816,15 @@ header .searchbox {
     border-bottom: 2px solid rgba(0, 0, 0, 1);
 }
 
+.slid5 .sl-5 li .mo_pic {
+    display: none;
+}
+
 /* contents2 */
+.content2 .content_inner .on {
+    display: block;
+}
+
 .tab_title {
     display: flex;
     justify-content: center;
@@ -835,10 +847,9 @@ header .searchbox {
 
 .tab_slider ul {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 3rem;
     margin-top: 2rem;
-    height: 70rem;
 }
 
 .tab_slider {
@@ -865,7 +876,11 @@ header .searchbox {
 
 /* content3 */
 
-.content_inner .on {
+.content_inner .tapbn {
+    display: none;
+}
+
+.content_inner .tapbn.on {
     display: block;
 }
 
@@ -885,7 +900,7 @@ header .searchbox {
 }
 
 .content_inner .bbut {
-    padding: 2rem 2.5rem;
+    padding: 1rem 2.5rem;
     margin-top: 2rem;
     margin-bottom: 4rem;
 }
@@ -899,8 +914,7 @@ header .searchbox {
 
 .content6 .content_inner,
 .content7 .content_inner {
-    height: auto;
-    max-height: 200rem;
+    max-height: 600rem;
     column-gap: 13rem;
 }
 
@@ -915,12 +929,27 @@ header .searchbox {
 
 .content3 .content_inner .tab_banner {
     width: 100%;
-    height: 100%;
 }
 
 
-.content3 .content_inner {
+.content3 .content_inner.tab1 {
     background: url(../image/mopc1-1.png) center center/cover no-repeat;
+}
+
+.content3 .content_inner.tab2 {
+    background: url(../image/mopc1-2.png) center center/cover no-repeat;
+}
+
+.content3 .content_inner.tab3 {
+    background: url(../image/mopc1-3.png) center center/cover no-repeat;
+}
+
+.content3 .content_inner.tab4 {
+    background: url(../image/mopc1-4.png) center center/cover no-repeat;
+}
+
+.content3 .content_inner.tab5 {
+    background: url(../image/mopc1-5.png) center center/cover no-repeat;
 }
 
 .content4 .content_inner {
@@ -934,17 +963,18 @@ header .searchbox {
 
 
 .card_gall {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    row-gap: 1rem;
 }
 
 .gl-card {
+    max-width: 426px;
     padding-bottom: 6rem;
-    width: min-content;
-    margin: auto;
+}
+
+.gl-card img {
+    width: 100%;
 }
 
 .gl-card.c2 {
@@ -979,7 +1009,6 @@ header .searchbox {
 }
 
 .card_roll {
-    width: calc(100%/3);
     overflow: hidden;
     margin: 0 auto;
 }
@@ -1043,7 +1072,7 @@ button.more_story {
 }
 
 .st_title p {
-    width: 235px;
+    width: 30rem;
 }
 
 
@@ -1057,8 +1086,6 @@ button.more_story {
     font-weight: 700;
 }
 
-/* //contents */
-
 span.link-arow {
     display: inline-block;
     width: 2.7rem;
@@ -1069,6 +1096,8 @@ span.link-arow {
 
 .story_slide_img {
     padding-right: 50rem;
+    padding-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .story_slide_img .stImg {
@@ -1080,6 +1109,7 @@ span.link-arow {
 }
 
 .story_slide_img li img {
+    width: 100%;
     border-radius: 20px;
 }
 
@@ -1095,11 +1125,14 @@ span.link-arow {
     position: relative;
 }
 
+
 /* //container */
 
 .map_box {
     padding: 2rem;
     border-right: 1px solid var(--text1);
+    width: 100%;
+
 }
 
 .map_box:nth-child(1) {
@@ -1146,11 +1179,13 @@ dd {
 }
 
 .footer .sitemap {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
 }
 
 .footer .map_box {
-    width: calc(100%/6);
+    width: 100%;
 }
 
 .address {
@@ -1231,7 +1266,7 @@ dd {
     gap: 4rem;
 }
 
-.botoom {
+.bottom {
     display: grid;
     grid-template-columns: repeat(3, auto);
     font-weight: 600;
@@ -1305,12 +1340,12 @@ dd {
     padding-right: 2rem;
 }
 
-.botoom-sns {
+.bottom-sns {
     display: flex;
     gap: 1rem;
 }
 
-.botoom-sns a {
+.bottom-sns a {
     display: block;
     width: 30px;
     height: 30px;
@@ -1358,6 +1393,7 @@ dd {
     /* header */
     .header_nav {
         background-color: var(--background);
+        margin: 0;
     }
 
     .header_inner {
@@ -1373,46 +1409,12 @@ dd {
         padding: 0 2rem;
     }
 
-    .searchbox,
+    .utility_wrap .searchbox,
     .menu_wrap {
         display: none;
     }
 
 
-    /* == 하단 메뉴 show == */
-    .botoom_navi {
-        opacity: 1;
-        visibility: visible;
-        position: fixed;
-        bottom: 0;
-        display: block;
-        width: 100%;
-        max-width: 1439px;
-        height: auto;
-        border-radius: 20px 20px 0px 0px;
-        background-color: var(--background);
-        box-shadow: 1px 1px 5px #333;
-    }
-
-    .bottom_menu {
-        display: flex;
-        width: 100%;
-        margin: 0 auto;
-        justify-content: space-around;
-        align-items: center;
-        margin: 0 auto;
-        position: relative;
-        cursor: pointer;
-    }
-
-    .bottom_menu li {
-        display: flex;
-        flex-direction: column;
-        box-sizing: border-box;
-        text-align: center;
-        padding: 1rem 0;
-        width: calc(100vw/5);
-    }
 
     .menu_icon {
         width: 10%;
@@ -1420,10 +1422,7 @@ dd {
         margin: 0 auto;
     }
 
-    .bottom_menu span {
-        width: 100%;
-        margin: 0 auto;
-    }
+
 
     .m_more {
         position: relative;
@@ -1494,12 +1493,7 @@ dd {
         display: none;
     }
 
-    /* == 베너 == */
-    .banner_inner {
-        width: 100%;
-        margin: auto;
-    }
-
+    /* == 배너 == */
     .bn_t1 {
         top: 14rem;
         left: 7rem;
@@ -1511,6 +1505,24 @@ dd {
         width: 550px;
     }
 
+    .textwrap {
+        width: 310px;
+    }
+
+    .bbut {
+        margin-top: 1rem;
+    }
+
+    .showcase_pager {
+        bottom: 1%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .showcase_pager a {
+        width: 20px;
+        color: transparent;
+    }
 
     .banner::before {
         left: 3%;
@@ -1519,12 +1531,150 @@ dd {
     .banner::after {
         right: 3%;
     }
+
+    /* contents */
+    .tab_menu {
+        column-gap: 3rem;
+        row-gap: 0;
+        font-size: 1.8rem;
+        line-height: 2rem;
+        margin: 1rem;
+    }
+
+    .tab_slider {
+        max-width: 1400px;
+        width: 100%;
+        height: auto;
+    }
+
+    .contents {
+        width: 100vw;
+        margin: 0;
+    }
+
+    .bn-tt1 {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 10rem;
+    }
+
+    .bn-tt2 {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 10%;
+    }
+
+    .bn-tt3 {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 10%;
+    }
+
+    .card_gall {
+        display: grid;
+        grid-template-areas:
+            "area1 area2"
+            "area1 area2"
+            "area3 area3";
+        grid-gap: 1rem;
+        margin: 0 1rem;
+    }
+
+    .card_roll:last-child {
+        width: 100%;
+        display: flex;
+        gap: 1rem;
+    }
+
+    .area1 {
+        grid-area: area1;
+    }
+
+    .area2 {
+        grid-area: area2;
+    }
+
+    .area3 {
+        grid-area: area3;
+    }
+
+    .gl-card {
+        margin: 0.5rem;
+    }
+
+    .content7 .content_inner {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .story_title {
+        align-self: center;
+        text-align: center;
+    }
+
+    .story_box {
+        margin: 1rem;
+    }
+
+    .st_text_list {
+        right: 1rem;
+    }
+
+
+    /* == 하단 메뉴 show == */
+    .bottom_navi {
+        opacity: 1;
+        visibility: visible;
+        position: fixed;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        max-width: 1439px;
+        height: auto;
+        border-radius: 20px 20px 0px 0px;
+        background-color: var(--background);
+        box-shadow: 1px 1px 5px #333;
+    }
+
+    .bottom_menu {
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 auto;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .bottom_menu li {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 1rem 0;
+        width: 100%;
+    }
+
+    .bottom_menu span {
+        width: 100%;
+        margin: 0 auto;
+    }
 }
+
 
 /* ====== 모바일 ======= */
 @media screen and (max-width:767px) {
-    .slid_wrap .sli2 {
-        background-image: url(../image/visual_banner02-m.jpg);
+    .side_flot_menu{
+        right: 1px;
+    }
+    .showcase .pc_pic {
+        display: none;
+    }
+
+    .showcase .mo_pic {
+        display: block;
     }
 
     .header_nav {
@@ -1532,28 +1682,111 @@ dd {
         margin: 0;
     }
 
+    .searchbox {
+        display: none;
+    }
+
     .sli_toolbar {
         display: none;
     }
 
-    .bn_t1 {
-        top: 8rem;
+    .textwrap {
+        text-align: center;
+        line-height: 2rem;
     }
 
-    .contents {
-        width: 100vw;
+    .textwrap h2 {
+        margin: 0;
+        font-size: 3rem;
     }
 
-    .content_inner {
-        width: 100%;
+    /* contents */
+.tab_menu {
+    column-gap: 2rem;
+    row-gap: 0;
+    font-size: 1.8rem;
+    line-height: 7rem;
+    margin: 1rem;
+    overflow-x: scroll;
+}
+
+    .tab_title {
+        flex-wrap: wrap;
+        column-gap: 3rem;
+        row-gap: 0;
+        font-size: 1.8rem;
+        margin: 1rem;
+    }
+
+    .tab_slider {
+
+        margin: 1rem;
     }
 
     .tab_slider ul {
+        width: 100%;
         display: grid;
-        grid-template-columns: repeat(2, auto);
-
-        margin-top: 1rem;
-        height: 70rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
     }
 
+    .tab_slider ul.sl-5 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slid5 .sl-5 li .pc_pic {
+        display: none;
+    }
+
+    .slid5 .sl-5 li .mo_pic {
+        display: block;
+    }
+    .gl-card .h3{
+        padding-bottom: 1rem;
+    }
+    .gl-card .caption{display: none;}
+    .rollcard_txt p{
+        margin: 0;
+    }
+    .story_box {
+        margin: 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .story_slide_img {
+        padding: 0;
+        width: 100%;
+    }
+
+    .st_txt_list {
+        position: static;
+        width: 57rem;
+    }
+
+    .st_title p {
+        width: 100%;
+        text-align: left;
+    }
+
+    .footer {
+        width: 100vw;
+    }
+
+    .footer .sitemap {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .bottom {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        gap: 2rem;
+        margin-bottom: 15rem;
+    }
+    .map_box dt {margin-top: 1.8rem;}
+    .map_box dd {
+        padding-bottom: 1.5rem;
+    }
 }

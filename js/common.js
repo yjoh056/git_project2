@@ -125,7 +125,7 @@ dept1Items.on('mouseover', function () {
 
 
 /*
-// bannrt slide
+// banner slide
 */
 $('.showcase').bxSlider({
   mode: 'fade',
@@ -152,11 +152,9 @@ buttons.forEach((button) => {
   button.addEventListener('click', () => {
     const target = button.getAttribute('data-target');
 
-    // 모든 버튼과 슬라이더 div에서 .on 클래스 제거
     buttons.forEach((btn) => btn.parentElement.classList.remove('on'));
     sliderDivs.forEach((div) => div.classList.remove('on'));
 
-    // 해당 버튼과 식별자에 맞는 슬라이더 div에 .on 클래스 추가
     button.parentElement.classList.add('on');
 
     const targetSliderDiv = document.querySelector(`.${target}`);
@@ -165,6 +163,11 @@ buttons.forEach((button) => {
     }
   });
 });
+
+
+/* contents 3 */
+
+
 
 /* content7 story */ 
 const stTxtLi = $('.st_txt_list li');
