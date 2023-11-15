@@ -195,11 +195,6 @@ html body .modal {
 
 
 .header_nav {
-    height: 118;
-    background-color: var(--background);
-}
-
-.header_nav {
     width: 100%;
     margin: auto;
     z-index: 55;
