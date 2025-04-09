@@ -6,6 +6,15 @@ window.onload = function () {
   inputElement.value = defaultSearchTerm;
 };
 
+    /*
+//pop창 닫기
+*/
+const pagePop =$('.pop-up-banner');
+const ppclose =$('.bt_close');
+ppclose.on('click', function () {
+    pagePop.css('visibility', 'hidden').hide();
+});
+
 /*
 //top button 나타나기
 */

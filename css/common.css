@@ -28,11 +28,12 @@
 }
 
 .wrap {
+    width: 100%;
     position: relative;
     display: flex;
     flex-flow: row wrap;
+    overflow: hidden;
 }
-
 
 .topbar_wrap {
     display: block;
@@ -53,6 +54,17 @@
 
 .udline {
     text-decoration: underline;
+}
+
+.pop-up-banner {
+    position: fixed;
+    display: block;
+    max-width: 416px;
+    height: 273px;
+    top: 8%;
+    left: 20%;
+    background: #fff;
+    z-index: 99999;
 }
 
 /* */
